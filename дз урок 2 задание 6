@@ -1,0 +1,30 @@
+product = []
+key_1 = "Название"
+key_2 = "Цена"
+key_3 = "Количество"
+key_4 = "Еденица измерения"
+quantity = input("Введите общее колличество товаров: ")
+while True:
+    if quantity.isdigit():
+        quantity = int(quantity)
+        break
+    else:
+        quantity = input("Введите общее колличество товаров: ")
+for i in range(quantity):
+    i += 1
+    a = input(f"Введите название товара {i} : ")
+    b = input("Введите цену товара: ")
+    c = input("Введите количество товара: ")
+    d = input("Введите еденицу измерения товара: ")
+    my_dict = {key_1: a, key_2: b, key_3: c, key_4: d}
+    my_tuple = (i, my_dict)
+   #print(my_tuple)
+    product.append(my_tuple)
+print(product)
+analytics = {}
+for var in product:
+    result = []
+    for var_2 in my_dict:
+        result.append(var_2[1][var])
+        my_dict[var] = result
+        print(result)
