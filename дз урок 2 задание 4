@@ -1,7 +1,0 @@
-a = input("Введите строку из нескольких слов с пробелами: ")
-a = list(a.split())
-c = 0
-for b in a:
-    c += 1
-    print(c)
-    print(b[0:10])
